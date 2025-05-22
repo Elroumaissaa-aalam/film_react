@@ -32,7 +32,7 @@ const Home = () => {
 
     return (
         <div className=' bg-black    flex flex-col gap-[10vh]'>
-            <div className='bg-[url("https://wallpapers.com/images/featured/lilo-and-stitch-background-c851qu47tbeorvxy.jpg")]  bg-cover bg-center flex flex-col gap-[10vh]'>
+            <div className='bg-[url("https://img.freepik.com/premium-photo/destroyed-car-background_871554-1588.jpg")]  bg-cover bg-center flex flex-col gap-[10vh]'>
                 <div className="text-white flex justify-around items-center gap-20 pt-8 max-[480px]:flex-col">
                     <h1 className="text-[35px] text-[#f9e125]">Cinevision</h1>
                     <input
@@ -49,9 +49,9 @@ const Home = () => {
 
                 <div className='flex flex-col gap-[5vh] justify-center p-9  '>
                     <h1 className='text-[#f9e125] text-start text-[5vh] '>trending movies</h1>
-                    <div className='gap-20  text-white justify-center  grid md:[grid-template-columns:repeat(4,1fr)] grid-cols-1 '>
+                    <div className='gap-20  text-white  justify-center  grid md:[grid-template-columns:repeat(5,1fr)] grid-cols-1 '>
 
-                        {filteredMovies.slice(0, 4).map((movie, id) => (
+                        {filteredMovies.slice(0, 5).map((movie, id) => (
 
                             <div key={id} className="hover:scale-105 transform transition duration-300">
 
@@ -62,14 +62,14 @@ const Home = () => {
                                         alt={movie.title}
                                     />
                                     <div className='flex flex-col gap-2'>
-                                        <h1 className=''>{movie.title}</h1>
+                                        <h1 className='text-[3vh]'>{movie.title}</h1>
                                         <div className='flex flex-col gap-4'>
                                             <div className='flex gap-3'>
-                                                <h1 className='text-[#f9e125]'>Date de sortie : </h1>
+                                                <h1 className='text-[#f9e125] text-[2vh] flex items-center'>Date de sortie : </h1>
                                                 <p>{movie.release_date}</p>
                                             </div>
                                             <div className='flex gap-3'>
-                                                <h1 className='text-[#f9e125]'>Note : </h1>
+                                                <h1 className='text-[#f9e125] text-[3vh] flex items-center'>Note : </h1>
                                                 <p>{movie.vote_average}</p>
                                             </div>
                                         </div>
@@ -79,6 +79,11 @@ const Home = () => {
                         ))}
                     </div>
                 </div>
+
+
+
+
+
             </div>
 
             <div className='flex flex-col gap-10 justify-center p-9'>
